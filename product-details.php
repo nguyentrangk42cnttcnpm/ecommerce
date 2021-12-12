@@ -21,12 +21,16 @@
 </head>
 
 <body>
+    <!-- Search Wrapper Area Start -->
     <?php include('./inc/header.php')?>
+    <!-- Search Wrapper Area End -->
 
     <!-- ##### Main Content Wrapper Start ##### -->
     <div class="main-content-wrapper d-flex clearfix">
 
+        <!-- Header Area Start -->
         <?php require('./inc/sidebar.php')?>
+        <!-- Header Area End -->
 
         <!-- Product Details Area Start -->
         <div class="single-product-area section-padding-100 clearfix">

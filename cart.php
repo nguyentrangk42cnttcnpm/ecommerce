@@ -21,12 +21,16 @@
 </head>
 
 <body>
+    <!-- Search Wrapper Area Start -->
     <?php include('./inc/header.php')?>
+    <!-- Search Wrapper Area End -->
 
     <!-- ##### Main Content Wrapper Start ##### -->
     <div class="main-content-wrapper d-flex clearfix">
 
+        <!-- Header Area Start -->
         <?php require('./inc/sidebar.php')?>
+        <!-- Header Area End -->
 
         <div class="cart-table-area section-padding-100">
             <div class="container-fluid">
