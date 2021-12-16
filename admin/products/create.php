@@ -79,6 +79,7 @@ if ($conn->query($sql) === TRUE) {
     </form>
 </div>
 </div>
+
 <!-- page-body-wrapper ends -->
 <?php include '../inc/footer.php' ?>
     </div>

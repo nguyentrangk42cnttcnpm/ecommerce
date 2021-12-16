@@ -90,6 +90,7 @@ $conn->close();
         <button type="submit" class="btn btn-success mr-2" name="update_user" value="Update">Cập nhật</button>
         <a href="index.php" class="btn btn-light">Cancel</a>
     </form>
+    
 </div>
 </div>
 <!-- page-body-wrapper ends -->

@@ -93,7 +93,5 @@ $conn->close();
       <!-- page-body-wrapper ends -->
       <?php include '../inc/footer.php' ?>
     </div>
-    
-    
   </body>
 </html>
