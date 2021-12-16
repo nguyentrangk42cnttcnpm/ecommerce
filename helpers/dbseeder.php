@@ -5,8 +5,48 @@ include '../random.php';
 /**
  * Seed data for brand table
  */
+function seed($tableName, $columns = array(), $amount = 0){
+    //create sql
+    $sql = "INSERT INTO $tableName (`name`, `desc`) values (:name, :desc)";
+    $stmt = $pdo->prepare($sql);
+    for($i = 0; $i < $amount; $i++){
+        foreach($columns as key => $value){
+            if($value == PDO::PARAM_STR){
+                $str = ran_str();
+                $stmt->bindParam(":$key", $str, PDO::PARAM_STR);
+            }
+            if($value == PDO::PARAM_INT){
+                $n = ran_int();
+                $stmt->bindParam(":$key", $n, PDO::PARAM_INT);
+            }
+            if($value == PDO::PARAM_FLAOT){
+                $n = ran_int();
+                $stmt->bindParam(":$key", $n, PDO::PARAM_FLOAT);
+            }
+        }
+    }
+    $stmt->execute();
+}
+$columnsBrand = array(
+    'name' => PDO::PARAM_STR,
+    'desc' => PDO::PARAM_STR,
+);
+$columnsProducts = array(
+    'name' => PDO::PARAM_STR,
+    'price' => PDO::PARAM_FLOAT,
+    'view' => PDO::PARAM_STR,
+    'discount' => PDO::PARAM_STR,
+    'brand_id' => PDO::PARAM_STR,
+    'category_id' => PDO::PARAM_STR,
+)
+//seed data to brands table
+seed('brands', $columnsBrand);
 
-//table: brand
+//seed data to products table
+seed('products', $columnsProducts);
+
+
+//table: brands
     // $stmt = $pdo->prepare('INSERT INTO brands (`name`, `desc`) values (:name, :desc)');
     // $name= "SamSung";
     // $desc = "SamSung Factory";
