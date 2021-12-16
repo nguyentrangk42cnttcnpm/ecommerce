@@ -48,8 +48,7 @@ if ($conn->query($sql) === TRUE) {
     <form class="forms-sample" action="" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1">username</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" name ="username" value="<?php echo $row['username']; ?>">
-        
+            <input type="text" class="form-control" id="exampleInputEmail1" name ="username" value="<?php echo $row['username']; ?>">       
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">pass</label>
